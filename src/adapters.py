@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import pandas as pd
 
 class OSClient():
@@ -24,11 +23,10 @@ class SeleniumClient():
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--headless=new") 
         options.add_argument("--disable-infobars")
-        options.add_argument("--disable-dev-shm-usage")  # Reduz uso de memória compartilhada
-        options.add_argument("--no-sandbox")  # Evita restrições de sandboxing
-        options.add_argument("--disable-gpu")  # Desativa a GPU (se necessário)
-        options.add_argument("--disable-extensions")  # Evita problemas com extensões
-        
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")  
+        options.add_argument("--disable-gpu") 
+        options.add_argument("--disable-extensions")
         driver = webdriver.Chrome(options=options)
         return driver
     

@@ -1,7 +1,6 @@
 from src.adapters import OSClient, RequestsClient, SeleniumClient
 from src import PROJECT_NAME
 
-from decouple import config
 from datetime import datetime
 from bs4 import BeautifulSoup
 import pandas as pd
